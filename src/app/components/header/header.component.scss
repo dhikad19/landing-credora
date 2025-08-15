@@ -1,0 +1,147 @@
+// Variabel warna
+$primary-color: #734a43;
+$white: #fff;
+
+// Navbar dasar
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+  padding: 0 15px;
+  height: 65px;
+  z-index: 1001;
+
+  .navbar-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    .logo {
+      img {
+        height: 25px;
+        object-fit: contain;
+      }
+    }
+
+    // Menu desktop
+    .nav-links.desktop {
+      display: flex;
+      list-style: none;
+
+      li {
+        margin: 0 15px;
+
+        a {
+          color: $primary-color;
+          font-weight: 500;
+          text-decoration: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    // Bagian tombol (login/register) dan hamburger
+    .navbar-button {
+      display: flex;
+      align-items: center;
+
+      .navbar-auth {
+        display: flex;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+
+        .btn {
+          margin-left: 10px;
+          font-weight: 500;
+          font-size: 14px;
+          padding: 8px 10px;
+          border-radius: 3px;
+          cursor: pointer;
+
+          &.login {
+            background: transparent;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+          }
+
+          &.register {
+            background: $primary-color;
+            color: $white;
+            border: none;
+          }
+        }
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+
+        span {
+          height: 3px;
+          width: 25px;
+          background: $primary-color;
+          margin: 4px 0;
+          transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+// Sidebar mobile
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; // hidden default
+  width: 250px;
+  height: 100%;
+  background-color: $primary-color;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1002;
+
+  &.active {
+    left: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 20px 0;
+      text-align: center;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+// Overlay
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
