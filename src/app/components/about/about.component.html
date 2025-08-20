@@ -1,0 +1,31 @@
+<section class="about" aria-labelledby="about-title">
+	<div class="about__bg"></div>
+	<div class="about__container">
+		<header class="about__header">
+			<p class="about__eyebrow">About {{ brandName }}</p>
+			<h2 id="about-title" class="about__title">
+				{{ headline }}
+			</h2>
+			<p class="about__desc">
+				{{ description.replace('Your Brand Name', brandName) }}
+			</p>
+		</header>
+  
+		<div class="about__grid" role="list">
+			<article class="about__card" *ngFor="let item of benefits" role="listitem">
+				<div class="about__icon" aria-hidden="true">★</div>
+				<h3 class="about__card-title">{{ item.title }}</h3>
+				<p class="about__card-copy">{{ item.copy }}</p>
+			</article>
+		</div>
+  
+		<div class="about__cta">
+			<button class="btn btn--primary" type="button" (click)="onPrimaryClick()">
+				{{ primaryCtaLabel }}
+			</button>
+			<button class="btn btn--ghost" type="button" (click)="onSecondaryClick()">
+				{{ secondaryCtaLabel }}
+			</button>
+		</div>
+	</div>
+</section>

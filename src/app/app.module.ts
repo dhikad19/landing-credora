@@ -13,7 +13,7 @@ import { SponsorsComponent } from './components/sponsors/sponsors.component';
 
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
-
+import { AboutComponent } from './components/about/about.component';
 export function playerFactory() {
   return player;
 }
@@ -28,6 +28,7 @@ const routes: Routes = [];
     FooterComponent,
     ContactComponent,
     SponsorsComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

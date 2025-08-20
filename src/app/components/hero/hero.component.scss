@@ -1,47 +1,33 @@
 .hero-section {
-  // padding: 100px 50px;
-
-  // background: linear-gradient(to right, #f9f9f9, #ffffff);
+  // height: 100vh;
 
   .hero-container {
-    margin: 0 auto;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    height: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+    height: 100%;
+
+    .reveal-right {
+      margin-top: 22px;
+    }
 
     .content {
+      flex: 2;
       height: 100%;
       padding-right: 70px;
-      flex: 2;
 
       .reveal-title {
         b {
-          // font-style: italic;
           color: #734a43;
-          // font-family: Arial, Helvetica, sans-serif;
         }
-      }
-
-      .learn {
-        background-color: transparent;
-        border: 1px solid #734a43;
-        color: #734a43;
-      }
-
-      .started {
-        background-color: #734a43;
-        color: white;
       }
 
       h1 {
         font-size: 3.2rem;
-        margin: 0px;
-        margin-bottom: 50px;
+        margin: 0 0 50px;
         color: #333;
       }
 
@@ -49,6 +35,16 @@
         font-size: 1.1rem;
         margin-bottom: 50px;
         color: #555;
+      }
+
+      .learn {
+        background-color: transparent;
+        color: #734a43;
+      }
+
+      .started {
+        background-color: #734a43;
+        color: white;
       }
 
       .actions {
@@ -99,16 +95,40 @@
   }
 }
 
+// Responsive
 @media (max-width: 768px) {
   .hero-section {
-    flex-direction: column;
-    padding: 60px 20px;
+    padding: 20px 20px;
 
-    .content,
-    .image {
-      text-align: center;
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+      .content {
+        text-align: center;
+        padding-right: 0px;
+        .reveal-title {
+          p {
+            text-align: left;
+            font-size: 14px;
+          }
+          h1 {
+            text-align: left;
+            font-size: 2.2rem;
+            margin: 0 0 20px;
+            color: #333;
+          }
+        }
+        .reveal-description {
+          // margin-top: 0px;
+          text-align: left;
+          font-size: 15px;
+        }
+      }
+      .image {
+        display: none;
+      }
     }
-
     .actions {
       justify-content: center;
       flex-direction: column;
@@ -117,59 +137,66 @@
   }
 }
 
+// Grid Section
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   width: 100%;
-  span {
-    font-weight: normal;
+
+  .grid-item {
+    background-color: #e0e0e0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+
+    span {
+      font-weight: normal;
+    }
   }
 
   .item-1 {
+    background-image: url("../../../assets/images/asset-1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     span {
       font-weight: 500;
-      color: #734a43;
+      color: #ffffff;
+      margin-bottom: 125px;
+    }
+  }
+
+  .item-2,
+  .item-3 {
+    color: #734a43;
+
+    span {
+      font-weight: 500;
     }
   }
 
   .item-2 {
     border-top-left-radius: 150px;
-    background-image: url("../../../assets/images/money.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #ffffff;
     border-bottom-left-radius: 150px;
-    span {
-      font-weight: 500;
-    }
   }
+
   .item-3 {
     border-top-right-radius: 150px;
-    color: #ffffff;
-    background-color: #734a43;
-    span {
-      font-weight: 500;
-    }
   }
 
   .item-4 {
+    background-color: #734a43;
+
     span {
       font-weight: 500;
-      color: #734a43;
+      color: #ffffff;
     }
   }
-}
-
-.grid-item {
-  background-color: #e0e0e0;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  border-radius: 8px;
-  font-weight: bold;
 }
