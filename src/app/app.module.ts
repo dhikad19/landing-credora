@@ -14,6 +14,8 @@ import { SponsorsComponent } from './components/sponsors/sponsors.component';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { AboutComponent } from './components/about/about.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { SwiperComponent } from './components/swiper/swiper.component';
 export function playerFactory() {
   return player;
 }
@@ -29,6 +31,8 @@ const routes: Routes = [];
     ContactComponent,
     SponsorsComponent,
     AboutComponent,
+    CarouselComponent,
+    SwiperComponent,
   ],
   imports: [
     BrowserModule,

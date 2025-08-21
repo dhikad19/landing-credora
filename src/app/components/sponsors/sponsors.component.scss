@@ -1,14 +1,35 @@
-.sponsor-cointainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 5px;
-  padding-bottom: 5px;
+.sponsor-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background: white; // opsional
+}
 
-  .sponsor-img {
-    height: 80px;
-    width: 80px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    object-fit: contain;
+.sponsor-container {
+  display: flex;
+  gap: 40px; // jarak antar logo
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+.sponsor-img {
+  height: 80px;
+  width: 80px;
+  filter: grayscale(100%);
+  object-fit: contain;
+}
+
+// Animasi scroll
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(
+      -50%
+    ); // geser setengah panjang (karena kita duplikat logo)
+  }
+}
+
+.sponsor-container:hover {
+  animation-play-state: paused;
 }

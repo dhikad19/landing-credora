@@ -10,11 +10,6 @@ export class AboutComponent {
   @Input() brandName = 'Credora';
   @Input() headline = 'Transform the way you manage your finances';
 
-  @Input()
-  description = `Mengelola keuangan tidak harus rumit. ${'Your Brand Name'} membantu Anda 
-                          mengatur anggaran, menabung, dan berinvestasi dengan cara yang lebih cerdas dan efisien—agar Anda 
-                          bisa mengurangi stres, menghindari pengeluaran tidak perlu, dan membangun keamanan finansial jangka panjang.`;
-
   @Input() benefits: { title: string; copy: string }[] = [
     {
       title: 'Kontrol Penuh',

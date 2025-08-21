@@ -1,31 +1,49 @@
 <section class="about" aria-labelledby="about-title">
-	<div class="about__bg"></div>
-	<div class="about__container">
-		<header class="about__header">
-			<p class="about__eyebrow">About {{ brandName }}</p>
-			<h2 id="about-title" class="about__title">
+	<!-- <div class="about__bg"></div> -->
+	<div class="about__container" style="padding: 15px;">
+		<header class="about__header" style="text-align: center; color: #555;">
+			<!-- <p class="about__eyebrow">About {{ brandName }}</p> -->
+			<span style="font-size: 14px; text-align: center;">About</span>
+      <h2 id="about-title" class="">
 				{{ headline }}
 			</h2>
-			<p class="about__desc">
-				{{ description.replace('Your Brand Name', brandName) }}
+			<p class="about__desc" style="font-size: 15px;">
+				Credova makes money management simple—helping you budget, save, and invest smarter for lasting financial security.
 			</p>
 		</header>
   
-		<div class="about__grid" role="list">
+		<!-- <div class="about__grid" role="list">
 			<article class="about__card" *ngFor="let item of benefits" role="listitem">
-				<div class="about__icon" aria-hidden="true">★</div>
 				<h3 class="about__card-title">{{ item.title }}</h3>
 				<p class="about__card-copy">{{ item.copy }}</p>
 			</article>
-		</div>
-  
-		<div class="about__cta">
-			<button class="btn btn--primary" type="button" (click)="onPrimaryClick()">
-				{{ primaryCtaLabel }}
-			</button>
-			<button class="btn btn--ghost" type="button" (click)="onSecondaryClick()">
-				{{ secondaryCtaLabel }}
-			</button>
-		</div>
+		</div> -->
+    
 	</div>
+  <div class="scroll-container" style="margin-bottom: 20px;">
+    <div class="scroll-content">
+      <div class="item-1"></div>
+      <div class="item-2">
+        <h3 class="about__card-title">Full Control</h3>
+        <p class="about__card-copy" style="font-size: 15px;">Track income, expenses, and goals in real-time for smarter decisions.</p>
+      </div>
+      <div class="item-2">
+        <h3 class="about__card-title">Efficient & Transparent</h3>
+        <p class="about__card-copy" style="font-size: 15px;">Simple flows and clear metrics—with no hidden fees.</p>
+      </div>
+      <div class="item-2">
+        <h3 class="about__card-title">Personalized</h3>
+        <p class="about__card-copy" style="font-size: 15px;">Strategies tailored to your unique goals: from budgeting and saving to investing.</p>
+      </div>
+      <div class="item-1"></div>
+    </div>
+  </div>
+  <!-- <div class="about__cta">
+    <button class="btn btn--primary" type="button" (click)="onPrimaryClick()">
+      {{ primaryCtaLabel }}
+    </button>
+    <button class="btn btn--ghost" type="button" (click)="onSecondaryClick()">
+      {{ secondaryCtaLabel }}
+    </button>
+  </div> -->
 </section>

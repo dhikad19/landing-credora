@@ -1,0 +1,22 @@
+<div class="carousel-container"
+     (mouseenter)="pauseAutoplay()"
+     (mouseleave)="resumeAutoplay()">
+
+  <div class="carousel-wrapper" [style.transform]="getTransform()">
+    <div class="carousel-item" *ngFor="let slide of slides">
+      <!-- <img [src]="slide.img" alt="slide" /> -->
+      <div class="caption">{{ slide.caption }}</div>
+    </div>
+  </div>
+
+  <!-- Navigation buttons -->
+  <button class="nav prev" (click)="prevSlide()">‹</button>
+  <button class="nav next" (click)="nextSlide()">›</button>
+
+  <!-- Dots -->
+  <div class="dots">
+    <span *ngFor="let slide of slides; let i = index"
+          (click)="goToSlide(i)"
+          [class.active]="i === currentIndex"></span>
+  </div>
+</div>
