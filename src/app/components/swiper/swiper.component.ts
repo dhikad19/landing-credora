@@ -7,7 +7,7 @@ import { AnimationOptions } from 'ngx-lottie';
   templateUrl: './swiper.component.html',
   styleUrls: ['./swiper.component.scss'],
 })
-export class SwiperComponent implements AfterViewInit {
+export class SwiperComponent {
   anim1Options: AnimationOptions = {
     path: 'assets/lottie/Email.json',
     loop: true,
@@ -20,13 +20,13 @@ export class SwiperComponent implements AfterViewInit {
     autoplay: true,
   };
 
-  ngAfterViewInit(): void {
-    ScrollReveal().reveal('.scroll-container', {
-      origin: 'left',
-      distance: '50px',
-      duration: 1000,
-      easing: 'ease',
-      delay: 800,
-    });
-  }
+  // ngAfterViewInit(): void {
+  //   ScrollReveal().reveal('.scroll-container', {
+  //     origin: 'right',
+  //     distance: '50px',
+  //     duration: 1000,
+  //     easing: 'ease',
+  //     delay: 800,
+  //   });
+  // }
 }

@@ -1,12 +1,31 @@
+.sponsor-desktop {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .sponsor-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
 .sponsor-wrapper {
   overflow: hidden;
   width: 100%;
-  background: white; // opsional
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
 }
 
 .sponsor-container {
   display: flex;
-  gap: 40px; // jarak antar logo
+  gap: 40px;
   width: max-content;
   animation: scroll-left 20s linear infinite;
 }
@@ -18,15 +37,12 @@
   object-fit: contain;
 }
 
-// Animasi scroll
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(
-      -50%
-    ); // geser setengah panjang (karena kita duplikat logo)
+    transform: translateX(-50%);
   }
 }
 

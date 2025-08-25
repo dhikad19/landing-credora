@@ -1,11 +1,12 @@
 .scroll-container {
-  position: relative;
+  // position: relative;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   display: none;
-  width: 100vw;
+  width: 100%;
+  scrollbar-width: none;
 
   @media screen and (max-width: 768px) {
     display: flex;
@@ -88,4 +89,8 @@
 
 .item:first-child {
   margin-left: 0;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
 }

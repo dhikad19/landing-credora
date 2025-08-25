@@ -26,7 +26,8 @@ export class HeroComponent implements AfterViewInit {
       distance: '50px',
       duration: 1000,
       easing: 'ease',
-      delay: 0,
+      delay: 200,
+      interval: 150,
     });
 
     ScrollReveal().reveal('.reveal-title', {
@@ -35,6 +36,7 @@ export class HeroComponent implements AfterViewInit {
       duration: 1000,
       easing: 'ease',
       delay: 200,
+      interval: 150,
     });
 
     ScrollReveal().reveal('.reveal-description', {
@@ -42,7 +44,8 @@ export class HeroComponent implements AfterViewInit {
       distance: '50px',
       duration: 1000,
       easing: 'ease',
-      delay: 400,
+      delay: 200,
+      interval: 200,
     });
 
     ScrollReveal().reveal('.reveal-button', {
@@ -50,7 +53,8 @@ export class HeroComponent implements AfterViewInit {
       distance: '50px',
       duration: 1000,
       easing: 'ease',
-      delay: 600,
+      delay: 200,
+      interval: 250,
     });
 
     ScrollReveal().reveal('.reveal-right', {
@@ -58,7 +62,16 @@ export class HeroComponent implements AfterViewInit {
       distance: '50px',
       duration: 1000,
       easing: 'ease',
-      delay: 800,
+      delay: 200,
+      interval: 300,
+    });
+    ScrollReveal().reveal('.reveal-mobile', {
+      origin: 'top',
+      distance: '20px',
+      duration: 1200,
+      easing: 'ease',
+      delay: 200,
+      interval: 350,
     });
 
     // ScrollReveal().reveal('.item-1', {

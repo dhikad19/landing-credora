@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+} from '@angular/core';
+import ScrollReveal from 'scrollreveal';
 
 @Component({
   selector: 'app-about',
@@ -6,27 +12,9 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   styleUrls: ['./about.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AboutComponent {
+export class AboutComponent implements AfterViewInit {
   @Input() brandName = 'Credora';
   @Input() headline = 'Transform the way you manage your finances';
-
-  @Input() benefits: { title: string; copy: string }[] = [
-    {
-      title: 'Kontrol Penuh',
-      copy: 'Pantau pemasukan, pengeluaran, dan target secara real-time untuk keputusan yang lebih tepat.',
-    },
-    {
-      title: 'Efisien & Transparan',
-      copy: 'Alur yang sederhana dan metrik yang jelas—tanpa biaya tersembunyi.',
-    },
-    {
-      title: 'Personalisasi',
-      copy: 'Strategi disesuaikan dengan tujuan unik Anda: dari budgeting, saving, hingga investasi.',
-    },
-  ];
-
-  @Input() primaryCtaLabel = 'Mulai Sekarang';
-  @Input() secondaryCtaLabel = 'Pelajari Fitur';
 
   onPrimaryClick(): void {
     console.log('primary click');
@@ -34,5 +22,32 @@ export class AboutComponent {
 
   onSecondaryClick(): void {
     console.log('secondary click');
+  }
+
+  ngAfterViewInit(): void {
+    ScrollReveal().reveal('.about__header', {
+      origin: 'left',
+      distance: '50px',
+      duration: 1000,
+      easing: 'ease',
+      delay: 200,
+      interval: 400,
+    });
+
+    ScrollReveal().reveal('.scroll-content-about', {
+      origin: 'top',
+      distance: '50px',
+      duration: 1000,
+      easing: 'ease',
+      delay: 450,
+    });
+
+    ScrollReveal().reveal('.about-list', {
+      origin: 'left',
+      distance: '50px',
+      duration: 1000,
+      easing: 'ease',
+      delay: 450,
+    });
   }
 }
